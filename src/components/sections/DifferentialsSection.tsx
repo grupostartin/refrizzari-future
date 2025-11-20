@@ -55,7 +55,7 @@ const differentials = [
 
 export const DifferentialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-white">
+    <section id="diferenciais" className="py-20 bg-gradient-to-b from-muted/30 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

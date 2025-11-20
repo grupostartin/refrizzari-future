@@ -21,7 +21,7 @@ export const GuaranteesSection = () => {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="garantias" className="py-20 relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-success" />
       

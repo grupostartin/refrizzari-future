@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { RegionsSection } from "@/components/sections/RegionsSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
@@ -69,7 +70,8 @@ const Index = () => {
         </script>
       </Helmet>
 
-      <main className="min-h-screen">
+      <Header />
+      <main className="min-h-screen pt-32">
         <HeroSection />
         <DifferentialsSection />
         <RegionsSection />

@@ -34,7 +34,7 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-primary/5">
+    <section id="processo" className="py-20 bg-gradient-to-b from-white to-primary/5">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

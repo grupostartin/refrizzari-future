@@ -43,7 +43,7 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-white">
+    <section id="faq" className="py-20 bg-gradient-to-b from-muted/30 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

@@ -43,7 +43,7 @@ export const RegionsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-muted/30">
+    <section id="regioes" className="py-20 bg-gradient-to-b from-white to-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

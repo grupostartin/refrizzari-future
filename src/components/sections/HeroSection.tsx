@@ -13,7 +13,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Floating shapes background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
