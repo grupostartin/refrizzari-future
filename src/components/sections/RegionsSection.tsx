@@ -95,35 +95,6 @@ export const RegionsSection = () => {
           ))}
         </div>
 
-        {/* Metropolitan Area */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <GlassCard className="bg-gradient-primary text-white border-0">
-            <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">🏘️ REGIÃO METROPOLITANA</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                {metropolitanCities.map((city, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.05 }}
-                    className="flex items-center gap-2"
-                  >
-                    <div className="h-2 w-2 rounded-full bg-white" />
-                    <span className="font-semibold">{city}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </GlassCard>
-        </motion.div>
-
         {/* CTA Box */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
