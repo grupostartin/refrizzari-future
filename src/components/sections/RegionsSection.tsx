@@ -25,8 +25,8 @@ const regions = [
     neighborhoods: ["Barreiro", "Lindéia", "Calafate", "Padre Eustáquio", "Carlos Prates", "Nova Suíça"],
   },
   {
-    name: "🌄 REGIÃO LESTE",
-    neighborhoods: ["Santa Tereza", "Serra do Curral", "Horto", "Taquaril", "São Geraldo", "Sagrada Família"],
+    name: "🌄 REGIÃO NORDESTE",
+    neighborhoods: ["Cidade Nova", "Ipiranga", "São Gabriel", "União", "Palmares", "Renascença"],
   },
 ];
 
@@ -37,9 +37,7 @@ const metropolitanCities = [
 
 export const RegionsSection = () => {
   const handleCTAClick = () => {
-    const phoneNumber = "5531999999999";
-    const message = "Olá! Gostaria de confirmar se vocês atendem minha região em BH para conserto de geladeira. Não cobram taxa de visita mesmo?";
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=5531981121874&text&type=phone_number&app_absent=0", "_blank");
   };
 
   return (
@@ -105,7 +103,7 @@ export const RegionsSection = () => {
         >
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              ⚡ Atendimento em menos de 24h
+              ⚡ Atendimento em até 2h
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
               Escolha sua região acima e solicite seu orçamento gratuito agora!

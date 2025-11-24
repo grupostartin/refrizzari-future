@@ -115,9 +115,7 @@ export const Header = () => {
   );
 
   const handleCTA = () => {
-    const message =
-      "Olá! Gostaria de agendar um orçamento gratuito para conserto de geladeira em BH. Vi que vocês têm atendimento rápido e sem taxa de visita.";
-    window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=5531981121874&text&type=phone_number&app_absent=0", "_blank");
   };
 
   const headerClassName = cn(
@@ -135,7 +133,7 @@ export const Header = () => {
             </motion.div>
             <div className="lg:hidden">
               <CTAButton size="sm" variant="success" onClick={handleCTA}>
-                WHATSAPP
+                SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </div>
           </div>
@@ -149,7 +147,7 @@ export const Header = () => {
 
             <div className="hidden lg:block">
               <CTAButton variant="success" size="sm" onClick={handleCTA}>
-                ORÇAMENTO GRÁTIS
+                SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </div>
           </div>

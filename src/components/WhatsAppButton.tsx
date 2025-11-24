@@ -2,18 +2,9 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface WhatsAppButtonProps {
-  phoneNumber?: string;
-  message?: string;
-}
-
-export const WhatsAppButton = ({ 
-  phoneNumber = "5531999999999",
-  message = "Olá! Preciso de um orçamento para conserto de geladeira em BH. Vi que vocês não cobram taxa de visita e parcelam em 6x sem juros. Gostaria de agendar uma visita!"
-}: WhatsAppButtonProps) => {
+export const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=5531981121874&text&type=phone_number&app_absent=0", "_blank");
   };
 
   return (

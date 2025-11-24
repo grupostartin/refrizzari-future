@@ -5,19 +5,17 @@ import { CheckCircle2 } from "lucide-react";
 const guarantees = [
   "Orçamento sem compromisso",
   "Sem taxa de visita em BH",
+  "⚡ Atendimento em até 2 horas",
   "Parcele em até 6x sem juros",
   "Garantia de 90 dias",
   "Técnicos certificados",
   "Cobertura toda BH e região",
-  "Atendimento 24/7",
   "Peças originais",
 ];
 
 export const GuaranteesSection = () => {
   const handleCTAClick = () => {
-    const phoneNumber = "5531999999999";
-    const message = "Olá! Quero solicitar meu orçamento gratuito para conserto de geladeira. Vocês realmente não cobram taxa de visita em BH?";
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=5531981121874&text&type=phone_number&app_absent=0", "_blank");
   };
 
   return (
@@ -94,7 +92,7 @@ export const GuaranteesSection = () => {
             </p>
             <div className="flex justify-center">
               <CTAButton onClick={handleCTAClick} variant="accent" size="lg">
-                QUERO MEU ORÇAMENTO GRÁTIS
+                SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </div>
           </motion.div>

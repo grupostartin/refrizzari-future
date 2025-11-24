@@ -3,13 +3,11 @@ import { PulsingBadge } from "@/components/PulsingBadge";
 import { CTAButton } from "@/components/CTAButton";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { CheckCircle2, Clock, Users, Star } from "lucide-react";
-import heroImage from "@/assets/hero-refrigerator.jpg";
+import funcionarioImage from "@/assets/funcionario.png";
 
 export const HeroSection = () => {
   const handleCTAClick = () => {
-    const phoneNumber = "5531999999999";
-    const message = "Olá! Preciso de um orçamento para conserto de geladeira em BH. Vi que vocês não cobram taxa de visita e parcelam em 6x sem juros. Gostaria de agendar uma visita!";
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=5531981121874&text&type=phone_number&app_absent=0", "_blank");
   };
 
   return (
@@ -59,7 +57,7 @@ export const HeroSection = () => {
               className="flex justify-center lg:justify-start mb-6"
             >
               <PulsingBadge variant="accent">
-                🔥 SEM TAXA DE VISITA • PARCELAMOS 6X
+                🔥 ATENDIMENTO EM ATÉ 2H • SEM TAXA DE VISITA
               </PulsingBadge>
             </motion.div>
 
@@ -85,7 +83,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-muted-foreground mb-8"
             >
-              Atendimento rápido em BH e região
+              ⚡ <span className="font-bold text-accent">Atendimento em até 2 horas</span>
               <br />
               📍 Todas as regiões de Belo Horizonte
             </motion.p>
@@ -178,7 +176,7 @@ export const HeroSection = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={heroImage}
+                src={funcionarioImage}
                 alt="Técnico profissional consertando geladeira em BH"
                 className="w-full h-auto"
               />

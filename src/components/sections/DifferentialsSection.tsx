@@ -37,9 +37,9 @@ const differentials = [
   },
   {
     icon: Clock,
-    title: "⚡ ATENDIMENTO 24H",
+    title: "⚡ ATENDIMENTO EM ATÉ 2H",
     description: "Rapidez quando você precisa",
-    details: "Atendemos sua solicitação em até 24 horas. Emergências priorizadas em toda BH.",
+    details: "Atendemos sua solicitação em até 2 horas. Emergências priorizadas em toda BH.",
     color: "text-accent",
     glow: "group-hover:shadow-[0_0_30px_rgba(255,107,53,0.3)]",
   },
