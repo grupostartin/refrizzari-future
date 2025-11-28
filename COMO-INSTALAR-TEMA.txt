@@ -1,0 +1,190 @@
+================================================================================
+REFRIZZARI - TEMA WORDPRESS
+Como Instalar o Tema no WordPress
+================================================================================
+
+🎯 RESUMO RÁPIDO
+----------------
+1. Comprimir a pasta "wordpress-theme" em ZIP
+2. Fazer upload no WordPress (Aparência > Temas > Adicionar novo)
+3. Ativar o tema
+4. Configurar logo e informações de contato
+
+================================================================================
+
+📦 PASSO 1: PREPARAR O TEMA PARA INSTALAÇÃO
+--------------------------------------------
+
+OPÇÃO A - Windows (Recomendado):
+1. Navegue até: F:\Backup Sites\refrizzari-future\
+2. Clique com botão direito na pasta "wordpress-theme"
+3. Selecione "Enviar para" > "Pasta compactada (zipada)"
+4. Renomeie o arquivo criado para: refrizzari.zip
+5. Pronto! O arquivo está pronto para upload
+
+OPÇÃO B - Usando PowerShell:
+1. Abra o PowerShell na pasta do projeto
+2. Execute o comando:
+   Compress-Archive -Path "wordpress-theme\*" -DestinationPath "refrizzari.zip"
+3. O arquivo refrizzari.zip será criado
+
+================================================================================
+
+📤 PASSO 2: INSTALAR NO WORDPRESS
+----------------------------------
+
+1. Acesse o painel administrativo do WordPress
+   URL: http://seusite.com/wp-admin
+
+2. No menu lateral, vá em:
+   Aparência > Temas
+
+3. Clique no botão:
+   "Adicionar novo" (no topo da página)
+
+4. Clique no botão:
+   "Enviar tema" (no topo da página)
+
+5. Clique em:
+   "Escolher arquivo"
+
+6. Selecione o arquivo:
+   refrizzari.zip
+
+7. Clique em:
+   "Instalar agora"
+
+8. Aguarde o upload e instalação (pode levar alguns segundos)
+
+9. Quando aparecer "Tema instalado com sucesso", clique em:
+   "Ativar"
+
+================================================================================
+
+⚙️ PASSO 3: CONFIGURAR O TEMA
+------------------------------
+
+CONFIGURAÇÃO DO LOGO:
+1. Vá em: Aparência > Personalizar
+2. Clique em: "Identidade do site"
+3. Clique em: "Selecionar logo"
+4. Faça upload do logo da empresa (formato PNG recomendado)
+5. Ajuste o tamanho se necessário
+6. Clique em: "Publicar" (no topo)
+
+CONFIGURAÇÃO DE CONTATO:
+1. Ainda no Personalizador, clique em: "Informações de Contato"
+2. Preencha os campos:
+   - Telefone: (31) 98112-1874
+   - WhatsApp: 5531981121874 (importante: com código do país)
+   - Email: hugohungari@gmail.com
+   - Endereço: Belo Horizonte, MG
+3. Clique em: "Publicar" (no topo)
+
+CONFIGURAÇÃO DA PÁGINA INICIAL:
+1. Vá em: Configurações > Leitura
+2. Em "Sua página inicial exibe", selecione: "Uma página estática"
+3. Em "Página inicial", selecione a página desejada
+4. Clique em: "Salvar alterações"
+
+================================================================================
+
+✅ PASSO 4: VERIFICAÇÃO FINAL
+------------------------------
+
+Após a instalação, verifique:
+
+□ O tema está ativo (Aparência > Temas)
+□ O logo aparece no cabeçalho
+□ O menu de navegação funciona
+□ Todas as seções estão visíveis:
+  □ Hero (início)
+  □ Diferenciais
+  □ Regiões
+  □ Processo
+  □ Garantias
+  □ Depoimentos
+  □ FAQ
+  □ Footer
+□ Os botões de WhatsApp funcionam
+□ O botão flutuante de WhatsApp aparece
+□ O site está responsivo (teste no celular)
+
+================================================================================
+
+🔧 SOLUÇÃO DE PROBLEMAS
+------------------------
+
+PROBLEMA: "O tema está faltando o arquivo style.css"
+SOLUÇÃO: Certifique-se de comprimir TODO o conteúdo da pasta 
+         "wordpress-theme", não a pasta em si.
+
+PROBLEMA: "Erro ao fazer upload"
+SOLUÇÃO: O arquivo pode estar muito grande. Aumente o limite de upload:
+         - Vá em: wp-admin > Mídia > Adicionar nova
+         - Verifique o "Tamanho máximo de upload"
+         - Se necessário, contate seu provedor de hospedagem
+
+PROBLEMA: "Tema instalado mas não aparece nada"
+SOLUÇÃO: 
+1. Limpe o cache do navegador (Ctrl + Shift + Del)
+2. Limpe o cache do WordPress (se usar plugin de cache)
+3. Verifique se os arquivos foram enviados corretamente via FTP
+
+PROBLEMA: "Imagens não aparecem"
+SOLUÇÃO: Verifique as permissões da pasta:
+         wp-content/themes/refrizzari/assets/images/
+         Permissão recomendada: 755
+
+================================================================================
+
+📁 ESTRUTURA DO TEMA (REFERÊNCIA)
+----------------------------------
+
+wordpress-theme/
+├── style.css              ← Arquivo obrigatório do WordPress
+├── functions.php          ← Funções do tema
+├── index.php              ← Template principal
+├── header.php             ← Cabeçalho
+├── footer.php             ← Rodapé
+├── screenshot.png         ← Preview do tema
+├── assets/
+│   ├── css/main.css       ← Estilos
+│   ├── js/main.js         ← Scripts
+│   └── images/            ← Imagens
+└── template-parts/        ← Seções do site
+
+================================================================================
+
+📞 SUPORTE
+----------
+
+Se precisar de ajuda:
+
+Email: hugohungari@gmail.com
+WhatsApp: (31) 98112-1874
+
+Documentação completa: Veja o arquivo README.md dentro da pasta do tema
+
+================================================================================
+
+🎉 PRONTO!
+----------
+
+Seu tema WordPress está instalado e configurado!
+
+Agora você tem um site profissional e completo para a Refrizzari.
+
+Próximos passos recomendados:
+1. Instalar plugin de SEO (Yoast SEO ou Rank Math)
+2. Instalar plugin de cache (WP Super Cache)
+3. Configurar Google Analytics
+4. Adicionar Google Search Console
+5. Criar backup regular do site
+
+================================================================================
+
+Desenvolvido com ❤️ para Refrizzari - Conserto de Geladeiras BH
+Versão 1.0.0 - Novembro 2025
+
+================================================================================

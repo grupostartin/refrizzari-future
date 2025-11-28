@@ -1,0 +1,211 @@
+================================================================================
+COMANDOS ÚTEIS - TEMA WORDPRESS REFRIZZARI
+================================================================================
+
+📦 COMPRIMIR O TEMA (PowerShell)
+--------------------------------
+
+# Navegar até a pasta do projeto
+cd "F:\Backup Sites\refrizzari-future"
+
+# Comprimir o tema
+Compress-Archive -Path "wordpress-theme\*" -DestinationPath "refrizzari.zip" -Force
+
+# Verificar se o arquivo foi criado
+Get-Item "refrizzari.zip"
+
+================================================================================
+
+📂 VERIFICAR ESTRUTURA DO TEMA
+-------------------------------
+
+# Listar arquivos principais
+Get-ChildItem "wordpress-theme" -Name
+
+# Listar todos os arquivos recursivamente
+Get-ChildItem "wordpress-theme" -Recurse -File | Select-Object FullName
+
+# Verificar tamanho total
+Get-ChildItem "wordpress-theme" -Recurse | Measure-Object -Property Length -Sum
+
+================================================================================
+
+🔍 VERIFICAR ARQUIVOS OBRIGATÓRIOS
+-----------------------------------
+
+# Verificar se os arquivos obrigatórios existem
+$required = @(
+    "wordpress-theme\style.css",
+    "wordpress-theme\functions.php",
+    "wordpress-theme\index.php",
+    "wordpress-theme\screenshot.png"
+)
+
+foreach ($file in $required) {
+    if (Test-Path $file) {
+        Write-Host "✓ $file existe" -ForegroundColor Green
+    } else {
+        Write-Host "✗ $file NÃO ENCONTRADO" -ForegroundColor Red
+    }
+}
+
+================================================================================
+
+📋 COPIAR TEMA PARA WORDPRESS LOCAL
+------------------------------------
+
+# Se você tem WordPress local, copie o tema diretamente
+# Substitua o caminho pelo seu WordPress local
+
+# Exemplo:
+Copy-Item -Path "wordpress-theme" -Destination "C:\xampp\htdocs\wordpress\wp-content\themes\refrizzari" -Recurse -Force
+
+================================================================================
+
+🧹 LIMPAR ARQUIVOS TEMPORÁRIOS (OPCIONAL)
+------------------------------------------
+
+# Remover node_modules se existir na pasta do tema
+Remove-Item "wordpress-theme\node_modules" -Recurse -Force -ErrorAction SilentlyContinue
+
+# Remover arquivos .DS_Store (Mac)
+Get-ChildItem "wordpress-theme" -Recurse -Force -Filter ".DS_Store" | Remove-Item -Force
+
+# Remover arquivos Thumbs.db (Windows)
+Get-ChildItem "wordpress-theme" -Recurse -Force -Filter "Thumbs.db" | Remove-Item -Force
+
+================================================================================
+
+📊 ESTATÍSTICAS DO TEMA
+------------------------
+
+# Contar arquivos PHP
+(Get-ChildItem "wordpress-theme" -Recurse -Filter "*.php").Count
+
+# Contar arquivos CSS
+(Get-ChildItem "wordpress-theme" -Recurse -Filter "*.css").Count
+
+# Contar arquivos JS
+(Get-ChildItem "wordpress-theme" -Recurse -Filter "*.js").Count
+
+# Contar linhas de código PHP
+(Get-Content (Get-ChildItem "wordpress-theme" -Recurse -Filter "*.php") | Measure-Object -Line).Lines
+
+================================================================================
+
+🔐 VERIFICAR PERMISSÕES (Linux/Mac)
+------------------------------------
+
+# Se você estiver usando Linux ou Mac, use estes comandos:
+
+# Definir permissões corretas
+chmod -R 755 wordpress-theme/
+chmod 644 wordpress-theme/style.css
+chmod 644 wordpress-theme/functions.php
+
+# Verificar permissões
+ls -la wordpress-theme/
+
+================================================================================
+
+🌐 TESTAR LOCALMENTE (XAMPP/WAMP)
+----------------------------------
+
+# 1. Copiar tema para WordPress local
+Copy-Item -Path "wordpress-theme" -Destination "C:\xampp\htdocs\wordpress\wp-content\themes\refrizzari" -Recurse
+
+# 2. Abrir navegador
+Start-Process "http://localhost/wordpress/wp-admin/themes.php"
+
+================================================================================
+
+📤 PREPARAR PARA PRODUÇÃO
+--------------------------
+
+# 1. Comprimir o tema
+Compress-Archive -Path "wordpress-theme\*" -DestinationPath "refrizzari-v1.0.0.zip" -Force
+
+# 2. Criar backup
+$date = Get-Date -Format "yyyy-MM-dd"
+Copy-Item "refrizzari-v1.0.0.zip" "refrizzari-backup-$date.zip"
+
+# 3. Verificar tamanho
+(Get-Item "refrizzari-v1.0.0.zip").Length / 1MB
+
+================================================================================
+
+🔄 ATUALIZAR TEMA (Versão Futura)
+----------------------------------
+
+# Quando precisar atualizar:
+
+# 1. Fazer backup do tema atual
+Compress-Archive -Path "wordpress-theme\*" -DestinationPath "refrizzari-backup-$(Get-Date -Format 'yyyy-MM-dd').zip"
+
+# 2. Fazer alterações necessárias
+
+# 3. Atualizar versão no style.css
+# Version: 1.0.1
+
+# 4. Comprimir nova versão
+Compress-Archive -Path "wordpress-theme\*" -DestinationPath "refrizzari-v1.0.1.zip" -Force
+
+================================================================================
+
+🐛 DEBUG (Se algo não funcionar)
+---------------------------------
+
+# Verificar se todos os arquivos foram copiados
+Get-ChildItem "wordpress-theme" -Recurse | Select-Object FullName | Out-File "lista-arquivos.txt"
+
+# Verificar conteúdo do style.css
+Get-Content "wordpress-theme\style.css" -Head 20
+
+# Verificar se imagens existem
+Get-ChildItem "wordpress-theme\assets\images"
+
+# Verificar tamanho dos arquivos CSS
+Get-ChildItem "wordpress-theme\assets\css" | Select-Object Name, Length
+
+================================================================================
+
+📝 NOTAS IMPORTANTES
+--------------------
+
+1. Sempre teste o tema em ambiente local antes de produção
+2. Faça backup antes de qualquer alteração
+3. Mantenha versões anteriores do tema
+4. Documente todas as mudanças
+5. Teste em diferentes navegadores
+
+================================================================================
+
+🎯 CHECKLIST ANTES DO UPLOAD
+-----------------------------
+
+□ Tema comprimido em ZIP
+□ Tamanho do arquivo verificado (< 10MB recomendado)
+□ Arquivos obrigatórios presentes (style.css, functions.php, index.php)
+□ Screenshot.png incluído
+□ Sem erros de PHP
+□ Testado localmente
+□ Backup criado
+□ Versão atualizada no style.css
+□ Documentação incluída
+
+================================================================================
+
+📞 SUPORTE
+----------
+
+Se precisar de ajuda com os comandos:
+
+Email: hugohungari@gmail.com
+WhatsApp: (31) 98112-1874
+
+================================================================================
+
+Desenvolvido para Refrizzari - Conserto de Geladeiras BH
+Versão 1.0.0 - Novembro 2025
+
+================================================================================

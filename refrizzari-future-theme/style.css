@@ -1,0 +1,104 @@
+/*
+Theme Name: Refrizzari Future Theme
+Theme URI: http://example.com/refrizzari-future-theme
+Author: Antigravity
+Author URI: http://example.com
+Description: A custom theme for Refrizzari Future
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-colors, responsive-layout
+Text Domain: refrizzari-future-theme
+*/
+
+:root {
+    --background: 0 0% 100%;
+    --foreground: 210 24% 16%;
+    --primary: 217 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 100% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 14 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --success: 165 100% 43%;
+    --success-foreground: 0 0% 100%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 12% 55%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 217 100% 50%;
+    --radius: 0.5rem;
+}
+
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Button Styles */
+button,
+.button,
+input[type="submit"],
+input[type="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+button.primary,
+.button.primary,
+.wp-block-button__link {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+}
+
+button.primary:hover,
+.button.primary:hover,
+.wp-block-button__link:hover {
+    opacity: 0.9;
+}
+
+button.secondary,
+.button.secondary {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+}
+
+button.accent,
+.button.accent {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: hsl(var(--background));
+    border-bottom: 1px solid hsl(var(--border));
+    padding: 1rem 0;
+}
+
+footer {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
