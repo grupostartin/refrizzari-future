@@ -132,7 +132,7 @@ export const Header = () => {
               <img src={logo} alt="Refrizzari" className="h-12 w-auto object-contain drop-shadow-lg" loading="lazy" />
             </motion.div>
             <div className="lg:hidden">
-              <CTAButton size="sm" variant="success" onClick={handleCTA}>
+              <CTAButton size="sm" variant="success" onClick={handleCTA} showIcon={false}>
                 SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </div>
@@ -146,7 +146,7 @@ export const Header = () => {
             </nav>
 
             <div className="hidden lg:block">
-              <CTAButton variant="success" size="sm" onClick={handleCTA}>
+              <CTAButton variant="success" size="sm" onClick={handleCTA} showIcon={false}>
                 SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </div>

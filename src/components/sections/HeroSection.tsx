@@ -123,7 +123,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.5, delay: 1.4 }}
               className="flex justify-center lg:justify-start mb-10"
             >
-              <CTAButton onClick={handleCTAClick} variant="success" size="lg">
+              <CTAButton onClick={handleCTAClick} variant="success" size="lg" showIcon={false}>
                 SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </motion.div>

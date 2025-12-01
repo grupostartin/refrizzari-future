@@ -31,7 +31,7 @@ const regions = [
 ];
 
 const metropolitanCities = [
-  "Contagem", "Nova Lima", "Betim", "Ibirité", 
+  "Contagem", "Nova Lima", "Betim", "Ibirité",
   "Ribeirão Neves", "Santa Luzia", "Sabará", "Vespasiano", "Lagoa Santa"
 ];
 
@@ -108,7 +108,7 @@ export const RegionsSection = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Escolha sua região acima e solicite seu orçamento gratuito agora!
             </p>
-            <CTAButton onClick={handleCTAClick} variant="success">
+            <CTAButton onClick={handleCTAClick} variant="success" showIcon={false}>
               SOLICITAR ORÇAMENTO GRÁTIS
             </CTAButton>
           </div>

@@ -22,7 +22,7 @@ export const GuaranteesSection = () => {
     <section id="garantias" className="py-20 relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-success" />
-      
+
       {/* Animated shapes */}
       <motion.div
         className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
@@ -91,7 +91,7 @@ export const GuaranteesSection = () => {
               Atendimento imediato em toda Belo Horizonte
             </p>
             <div className="flex justify-center">
-              <CTAButton onClick={handleCTAClick} variant="accent" size="lg">
+              <CTAButton onClick={handleCTAClick} variant="accent" size="lg" showIcon={false}>
                 SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </div>

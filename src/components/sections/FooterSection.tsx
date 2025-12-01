@@ -69,7 +69,7 @@ export const FooterSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex justify-center"
             >
-              <CTAButton onClick={handleCTAClick} variant="accent" size="lg">
+              <CTAButton onClick={handleCTAClick} variant="accent" size="lg" showIcon={false}>
                 SOLICITAR ORÇAMENTO GRÁTIS
               </CTAButton>
             </motion.div>
@@ -78,42 +78,42 @@ export const FooterSection = () => {
           {/* Google Map and Business Section */}
           <div className="mt-16 grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
             {/* Map */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 h-[300px] w-full bg-white"
             >
-              <iframe 
+              <iframe
                 src="https://maps.google.com/maps?q=R.%20Tapira%2C%201105%20-%20Renascen%C3%A7a%2C%20Belo%20Horizonte%20-%20MG%2C%2031130-550&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização Refrizzari"
               />
             </motion.div>
 
             {/* Google Business Card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="relative rounded-2xl overflow-hidden shadow-2xl h-[300px] border border-white/20 flex items-center justify-center group"
             >
-              <div 
+              <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                 style={{ backgroundImage: `url(${businessBg})` }}
               />
               <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/50" />
-              
-              <a 
-                href="https://share.google/YYQLoJThd1cBGFmGH" 
-                target="_blank" 
+
+              <a
+                href="https://share.google/YYQLoJThd1cBGFmGH"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="relative z-10 inline-flex items-center gap-2 bg-transparent border-2 border-white hover:bg-white/20 text-white font-bold py-2 px-6 text-sm rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
